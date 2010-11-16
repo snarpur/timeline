@@ -1,0 +1,7 @@
+$.i18n.is = {
+   date : 'dd/mm/yy',
+   monetary: 'nn,nnnn.nn',
+   currency: 'rs',
+   numeralBase : 2406,
+   numeralPrefix:"u0"
+};

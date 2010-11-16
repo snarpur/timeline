@@ -1,0 +1,121 @@
+#canvas{
+    position:relative;
+
+}
+#tml_header{
+    background-color:#5958a0;
+    padding-top:.5em;
+}
+#tml_header .cell{
+    float:left;
+    color:#f9f9f9;
+    text-align:center;
+}
+    						jhkjh
+.vertical_divider{
+    width:1px;
+    border-left:#eaeaea 1px dotted;
+    position:absolute;
+}
+.line{
+
+}
+.line p{
+    float:left;
+    color:#5958a0;
+    background-color:#eaeaea;
+    font-weight:bold;
+    text-align:center;
+}
+.item_line{
+    position:relative;
+}
+.item_line p{
+    position:absolute;
+    text-indent:1.2em;
+    right:0;
+}
+.item_line p em{
+    vertical-align:middle;
+}
+.item{
+    position:absolute;
+}
+.item.period span{
+    height:inherit;
+    background:rgba(0,0,0,0.3);
+    font-size:.8em;
+    font-weight:bold;
+    color:#fff;
+    display:none;
+    float:left;
+    padding:0 .2em;
+}
+
+.item_line.hover .period span{
+    display:block;
+}
+.item.point{
+    width:32px;
+    height:32px;
+}
+
+
+.chartType .chart{
+    width: 550px;
+}
+
+.chartType .icon.toggler{
+    width:40px;
+    height:40px;
+    position:absolute;  
+    top:150px;
+    left:600px;
+}
+
+
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.2.0
+build: 2676
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.2.0
+build: 2676
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+
+.debug #canvas{
+    background-color:rgb(245,245,245);
+}
+.debug #tml_header{
+    background-color:rgb(240,240,240);
+}
+
+.debug #tml_body{
+    background-color:rgb(230,230,230);
+}
+.debug .line{
+    background-color:rgb(220,220,220);
+}
+.debug .line p{
+    background-color:rgb(220,220,255);
+    float:left;
+}
+.debug .item_line{
+    background-color:rgb(210,210,210);
+    margin-bottom: 1px;
+}
+.debug .item.point{
+}
+.debug .item{
+    background-color:rgb(200,200,200);
+}
