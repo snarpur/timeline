@@ -22,21 +22,26 @@ sn.declare("Timeline.ItemLine",
               this._setItemLabelColor();
       },
       _drawItems:function(){
-          var params = {canvas:this.canvas};
+          var params = {canvas:this.canvas},
+              timelineObj;
           params.container = this.elem;
+          params.itemDetailsContainer = this.canvas.itemDetailsContainer;
 
           this._setOpacityFactor(this.data.occurances)
           if(this.data.occurances){
               for(var i = 0; i < this.data.occurances.length; i++){
                   params.data = this.data.occurances[i];
+                  params.itemName = this.data.name;
                   if(this.data.occurances[i].end){
                       params.color = this.color;
                       params.height = this.height;
-                      _o.create(sn.Timeline.PeriodItem).init(params);
+                      timelineObj = _o.create(sn.Timeline.PeriodItem).init(params);
                   }
                   else{
-                      _o.create(sn.Timeline.PointItem).init(params);
+                     timelineObj = _o.create(sn.Timeline.PointItem).init(params);
                   }
+                   params.timelineObj = timelineObj;
+                  _o.create(sn.Timeline.ItemDetail).init(params)
               }
           }
       },

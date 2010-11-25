@@ -1,19 +1,22 @@
-sn.Timeline.PeriodItem = _o.create(sn.Timeline.Item,
+sn.declare('Timeline.PeriodItem',
 {
     init:function(params){
         $.extend(this,params);
-        params.view = this.view;
-        this.uber.init(params);
-        this.elem = this.uber.elem;
+        $.extend(this, sn.Timeline.Item);
         this._build();
+        return this;
     },
     _build:function(){
-         this._widthCss();
-         this._colorCss();
-         this._heightCss();
-         this._spacingCss();
-         this._borderCss();
-
+        this.data.itemName = this.itemName;
+        this.elem = $.tmpl(this.view, this.data);
+        this.elem.appendTo(this.container);
+        this.elem.data("obj",this);
+        this._yCss();
+        this._widthCss();
+        this._colorCss();
+        this._heightCss();
+        this._spacingCss();
+        //this._borderCss();
     },
     _getWidth: function(){
         var startPos = this._getDatePosition(this.data.start),
@@ -38,7 +41,7 @@ sn.Timeline.PeriodItem = _o.create(sn.Timeline.Item,
             this.elem.css("border-left","1px "+previous.color+"solid")  
     },
     _heightCss:function(){
-      this.elem.css("height", (this.height -2 )+"px")
+        this.elem.css("height", (this.height -2 )+"px")
     },
     _spacingCss:function(){
         this.elem.css("margin-bottom","2px")

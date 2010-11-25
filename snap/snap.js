@@ -6,25 +6,24 @@ if(console != undefined){
 
 var _o = {};
 
-// Make the constuctor ex. Object.create(myobject)
-_o.create = function (o,args,element) 
-{
+// Make the constuctor ex. _o.create(myobject)
+_o.create = function (o) {
     function F() {}
     F.prototype = o;
     var n = new F();
-    if(args){
-        n.uber = o;
-        for(var i in args){
-            n[i] = args[i];
-        }
-    }
-    if(o.init && element){
-        n.init(args,element);
-    }
-
+    
     return n;
 };
-
+_o.extend = function (o, e) {
+    function F() {}
+    F.prototype = o;
+    var n = new F();
+    
+    for(var i in e){
+        n[i] = e[i];
+    }
+    return n;
+};
 
 // Implement bridge pattenr
 $.plugin = function(name, object) 
@@ -49,21 +48,22 @@ $.plugin = function(name, object)
 };
 
 //Snap GLOBAL OBJECT
-var sn = {controller:"",model:"",view:""};
+var sn = {};
 sn.declare = function(name,body){
   var parts = name.split('.');
   var len = parts.length  - 1;
   var current = sn;
-  for (var i in parts)
-  {
+
+  for (var i in parts){
     if (!current[parts[i]]) 
       current[parts[i]] = {};
     if(i == len)
       current[parts[i]] = body;
     current = current[parts[i]];
   }
-  
- }
+};
+
+
 
 
 

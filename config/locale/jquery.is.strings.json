@@ -2,8 +2,22 @@ $.i18n.is.strings = {
     "medications": "lyfjagjöf",
     "communication": "samskipti",
     "events": "atburðir",
+    "phone_interview": "símaviðtal",
+    "interview":"viðtal",
     "scales": "spurningalistar",
+    "d_dtods": "D-DTODS",
+    "hsq_r":"HSQ-R",
     "inattentive": "athyglisbrestur",
     "hyperactive_impulsive": "ofvirkni/hvatvísi",
-    "total":"heildarkvarði"
+    "total":"heildarkvarði",
+    "wake_up": "að vakna á morgnana",
+    "getting_ready": "að fara á fætur og hafa sig til fyrir skólann",
+    "go_to_shcool": "að fara í skólann",
+    "classes_before_lunch": "kennslustundir fyrir hádegi",
+    "lunch": "hádegismatur",
+    "classes_after_lunch": "kennslustundir eftir hádegi",
+    "getting_home": "að koma heim úr skólanum",
+    "early_evening": "snemma kvölds",
+    "late_evening": "seint á kvöldin",
+    "going_to_bed": "að fara í háttin og sofna"
 };

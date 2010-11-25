@@ -3,12 +3,69 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>Timeline</title>
-  <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
   <link rel="stylesheet" href="lib/jquery-ui/development-bundle/themes/redmond/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
-   <link rel="stylesheet" href="lib/jqplot/dist/jquery.jqplot.css" type="text/css" media="screen" title="no title" charset="utf-8">
-  
-  <script src="lib/labjs/LAB.js" type="text/javascript" charset="utf-8"></script>
-  <script src="config/load.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="lib/jqplot/dist/jquery.jqplot.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/icons.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <!--script src="lib/labjs/LAB.js" type="text/javascript" charset="utf-8"></script>
+  <script src="config/load.js" type="text/javascript" charset="utf-8"></script-->
+      
+<script src="lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jquery/jquery-tmpl.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jquery-ui/development-bundle/ui/jquery-ui-1.8.5.custom.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/jquery.jqplot.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/plugins/jqplot.barRenderer.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/plugins/jqplot.categoryAxisRenderer.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/plugins/jqplot.CanvasAxisTickRenderer.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/plugins/jqplot.CanvasAxisLabelRenderer.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jqplot/dist/plugins/jqplot.canvasTextRenderer.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/underscore/underscore.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/underscore/underscore.strings.js" type="text/javascript" charset="utf-8"></script>
+<!--script src="lib/date/build/date.js" type="text/javascript" charset="utf-8"></script-->
+<script src="lib/date/build/date-is-IS.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/i18n/i18n.js" type="text/javascript" charset="utf-8"></script>
+<script src="config/locale/jquery.is.json" type="text/javascript" charset="utf-8"></script>
+<script src="config/locale/jquery.is.strings.json" type="text/javascript" charset="utf-8"></script>
+<script src="lib/raphael/raphael.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/data.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/snap.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/utils/decoration.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/utils/color.js" type="text/javascript" charset="utf-8"></script>
+<script src="config/scalesConfig.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/utils/iconizer.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Canvas.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/canvas/canvas.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/ItemDetail.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Line.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/line/line.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/ItemLine.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/itemLine/itemLine.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/itemLineController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Item.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/PointItem.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/PointItemController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/PeriodItem.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/item/item.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Charts/Chart.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Charts/Bar.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Charts/Line.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Charts/Line.hsq_r.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Widget/ChartViewer.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/widget/chartViewer.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/ChartViewerController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/helpers/helper.js" type="text/javascript" charset="utf-8"></script>
+<script src="config/init.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function(){
+       snInit();
+       //console.log(Date.today())
+   }); 
+</script>
+<style id="css" type="text/css" media="screen">
+    
+</style>
+
 
 </head>
 <body id="index">
@@ -16,7 +73,7 @@
   
   <div id="canvas"> 
     <div id="tml_header"></div>
-    <div id="tml_body"></div> 
+    <div id="tml_timeline"></div> 
   </div>
   
   <div id="dialog-modal"  style="display: none;">

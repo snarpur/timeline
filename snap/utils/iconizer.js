@@ -1,11 +1,20 @@
-sn.declare("Utils.Iconizer",{
-    init:function(options,element){
-        if(_.size(options) == 0)
-            
-        var icon_path = decoration.icons[params.group][params.name],
-            paper = Raphael(params.elem),
-            icon = paper.path(icon_path);
-       icon.attr(decoration.iconStyles[params.style]);  
+sn.declare("Utils.Iconizer",
+{
+    init:function(options,elem){
+
+        var icon_path, paper, icon;
+        console.log(options)
+        if(decoration.icons[options.group][options.name]){
+            icon_path = decoration.icons[options.group][options.name]
+        }
+        else{
+            console.log(options.group)
+            icon_path = decoration.icons[options.group]
+        }
+        //console.log(icon_path)
+        paper = Raphael(options.elem,32,32);
+        icon = paper.path(icon_path);
+        icon.attr(decoration.iconStyles[options.style]);  
     }
-    
 });
+$.plugin('iconizer', sn.Utils.Iconizer);

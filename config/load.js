@@ -31,7 +31,6 @@ $LAB
 .script("app/view/itemLine/itemLine.js")
 .script("app/controller/ItemLineController.js")
 .script("app/model/Item.js")
-.script("app/view/item/item.js")
 .script("app/model/PointItem.js")
 .script("app/view/item/pointItem.js")
 .script("app/controller/PointItemController.js")
@@ -39,8 +38,10 @@ $LAB
 .script("app/view/item/periodItem.js")
 .script("app/model/Charts/Bar.js")
 .script("app/model/Charts/Line.js")
+.script("app/model/Charts/Line.hsq_r.js")
 .script("app/model/Widget/ChartViewer.js")
 .script("app/view/widget/chartViewer.js")
+.script("app/controller/ChartViewerController.js")
 .script("config/init.js")
 .wait(function(){
    snInit(); 

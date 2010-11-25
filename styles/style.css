@@ -11,12 +11,15 @@
     color:#f9f9f9;
     text-align:center;
 }
-    						jhkjh
+#item-details{
+    border:#eaeaea solid 0px;
+}
 .vertical_divider{
     width:1px;
     border-left:#eaeaea 1px dotted;
     position:absolute;
 }
+#
 .line{
 
 }
@@ -52,28 +55,67 @@
     padding:0 .2em;
 }
 
+.item.point{
+    display:block;
+    position:absolute;
+    left:0;
+    font-size: .7em;
+    overflow:visible;
+    word-break: normal;
+    border:red solid 1px;
+    
+}
 .item_line.hover .period span{
     display:block;
 }
-.item.point{
+
+.quarter{float:left; background-color:#eaeaea;}
+
+
+.icon{
+    cursor:pointer;
     width:32px;
     height:32px;
 }
-
-
-.chartType .chart{
-    width: 550px;
+.quarter .icon{
+    width:21px;
+    height:21px;
 }
+/*::::::::::: CHARTS :::::::::::::::*/
 
+.chartType{margin-bottom:1.3em;}
 .chartType .icon.toggler{
-    width:40px;
-    height:40px;
-    position:absolute;  
-    top:150px;
-    left:600px;
+    float: right;
+    margin-top:30px;
+}
+.chartViewer .jqplot-title{
+/*    border:blue solid;
+    margin-bottom: 2em;*/
+}
+.chartViewer .ui-widget-header{
+    background:none;
+    border-width:0;
+    height:5px;
 }
 
+/*::: hsqr */
+.ui-dialog.hsq_r .chart{width:550px;}
 
+/*::: d_dots*/
+.ui-dialog.d_dtods .chart{width:850px;}
+.d_dtods .jqplot-xaxis-tick{width:60px;}
+
+.d_dtods .jqplot-yaxis-tick:nth-child(1){visibility:hidden;}
+.d_dtods .jqplot-yaxis-tick:nth-child(2){background:url('img/emoticons/xs/1.jpg') no-repeat;}
+.d_dtods .jqplot-yaxis-tick:nth-child(3){background:url('img/emoticons/xs/2.jpg') no-repeat;}
+.d_dtods .jqplot-yaxis-tick:nth-child(4){background:url('img/emoticons/xs/4.jpg') no-repeat;}
+.d_dtods .jqplot-yaxis-tick:nth-child(5){background:url('img/emoticons/xs/5.jpg') no-repeat;}
+.d_dtods .jqplot-yaxis-tick{
+    width:35px;
+    height:35px;
+    text-align:left;
+    text-indent: -9999px!important;
+}
 /*
 Copyright (c) 2010, Yahoo! Inc. All rights reserved.
 Code licensed under the BSD License:

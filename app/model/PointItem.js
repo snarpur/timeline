@@ -1,22 +1,27 @@
-sn.Timeline.PointItem = _o.create(sn.Timeline.Item,
+sn.declare('Timeline.PointItem',
 {
     init:function(params){
-        params.view = this.view;
-        this.uber.init(params)
-        this.elem = this.uber.elem;
-        this._build();
+       $.extend(this,params);
+       $.extend(this, sn.Timeline.Item);
+       this._build();
+       return this;
     },
     _build:function(){
-        this._drawIcon();
-        
+        this.data.itemName = this.itemName;
+        this.elem = $.tmpl(this.view, this.data);
+        this.elem.appendTo(this.container);
+        this.elem.data("obj",this);
+        this._yCss();
+        //this._drawIcon(); 
     },
     _drawIcon:function(){
         var params = {
             group:this.getLineName(),
-            name:this.getLineItemName(),
+            name:this.itemName,
             style:"medium_grey",
             elem:this.elem[0]
         };
+
         decoration.drawIcon(params);
     }
     

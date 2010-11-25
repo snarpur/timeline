@@ -1,5 +1,5 @@
 sn.declare("Timeline.ItemLine.view.point","\
-    <div class='item_line'></div>\
+    <div class='item_line ${name}'></div>\
 ");
 
 sn.declare("Timeline.ItemLine.view.period","\
