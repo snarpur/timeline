@@ -1,4 +1,79 @@
-.point.icon{
+span.icon{
     width:32px;
     height:32px;
+    background:  url("img/icons.png") no-repeat;
+    
+}
+
+#item-menu span.icon{
+    width:130px;
+    height:18px;
+    background-position: -232px -626px;
+}
+a.icon{background: url("img/icons.png") no-repeat;}
+
+a.view-details.closed{background-position: 101% -0px;}
+a.view-details.open{background-position: 101% -32px;}
+
+
+.item_line.interview .icon{background:  url("img/interview.png")  0 0 no-repeat;}
+.item_line.phone_interview .icon{background:  url("img/telephone.png")  0 0 no-repeat;}
+.scales .item_line .icon{background:  url("img/barchart.png")  0 0 no-repeat;}
+.line.events .item.icon{background:  url("img/events214080.png")  0 0 no-repeat;}
+.line p .icon,
+.item-details span.icon{
+    display: block;
+    float:left;
+    width:26px;
+    height: 26px;
+}
+/*:::::ITEM DETAILS:::::*/
+.line p .icon.focus{background-position: -230px -523px;}
+.item-details .icon{opacity:0.7;}
+.item-details .interview .icon{background:  url("img/interview.png")  0 0 no-repeat;}
+.item-details .phone_interview .icon{background:  url("img/telephone.png")  0 0 no-repeat;}
+.item-details .scales .icon{background:  url("img/barchart.png")  0 0 no-repeat;}
+.item-details .medications .icon{background:  url("img/medication.png")  0 0 no-repeat;}
+.item-details .events .icon{background:  url("img/events214080.png")  0 0 no-repeat;}
+/*:::::HEADER:::::*/
+#header .icon a,
+#leftnav .icon{ float:left; height:18px; width:18px; padding:2px; background-position: 50% 50%; background-repeat:no-repeat;}
+.topnav .icon.home a{ background-image:  url("img/home.png"); }
+.topnav .icon.settings a{ background-image:  url("img/settings.png"); }
+#header .icon.search a{ background-image:  url("img/search.png"); }
+
+/*:::::LEFT NAVIGATION:::::*/
+#leftnav .icon.info{ background-image:  url("img/info-grey.png"); }
+#leftnav .icon.history{ background-image:  url("img/head-grey.png"); }
+#leftnav .icon.record{ background-image:  url("img/folder-grey.png"); }
+
+#leftnav .selected .icon.info{ background-image:  url("img/info-dark.png"); }
+#leftnav .selected .icon.history{ background-image:  url("img/head-dark.png"); }
+#leftnav .selected .icon.record{ background-image:  url("img/folder-dark.png"); }
+
+/*:::::LISTVIEW:::::*/
+.listview-group h2{position: relative; }
+.listview-group h2 span{ height:28px; width:28px; display:block; position:absolute; top:2px; left:4px;}
+.listview-group.medications h2 span{background:  url("img/medication-white.png")  0 0 no-repeat;}
+.listview-group.communication h2 span{background:  url("img/communication-white.png")  0 0 no-repeat;}
+.listview-group.events h2 span{background:  url("img/events-white.png")  0 0 no-repeat;}
+.listview-group.scales h2 span{background:  url("img/questionnaires-white.png")  0 0 no-repeat;}
+
+
+/*:::: MODAL ::::*/
+#modal .icon{ width:16px; height:16px;}
+#modal .icon.close{
+  position:absolute;
+  top: 2px;
+  left:2px;
+  background:  url("img/close16.png")  0 0 no-repeat;}  
+}
+
+/*:::: CHARTS ::::*/
+
+.chart-type.line span{
+    background: url("img/barchart.png") 0 0 no-repeat !important;
+} 
+.chart-type.bar span{ 
+    background: url("img/trendline.png") 0 0 no-repeat !important; 
 }

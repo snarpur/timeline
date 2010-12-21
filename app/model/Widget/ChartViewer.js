@@ -11,7 +11,7 @@ sn.declare("Widget.ChartViewer",{
         });
 
         this.tmpl.slice(1).hide();   
-        this._createIcon();
+       // this._createIcon();
 
     },
     _createIcon:function(){

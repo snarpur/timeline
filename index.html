@@ -3,17 +3,29 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>Timeline</title>
+  
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata&subset=latin' rel='stylesheet' type='text/css'>
 
+
+  <!--link rel="stylesheet" href="styles/fonts/Colaborate-fontfacekit/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/fonts/Lane-fontfacekit/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8"-->
   <link rel="stylesheet" href="lib/jquery-ui/development-bundle/themes/redmond/jquery-ui-1.8.5.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="lib/pixelmatrix-uniform/css/uniform.default.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="lib/jqplot/dist/jquery.jqplot.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles/icons.css" type="text/css" media="screen" title="no title" charset="utf-8">
+ <link rel="stylesheet" href="styles/buttons.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="lib/jwysiwyg/jwysiwyg/jquery.wysiwyg.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <!--script src="lib/labjs/LAB.js" type="text/javascript" charset="utf-8"></script>
   <script src="config/load.js" type="text/javascript" charset="utf-8"></script-->
       
 <script src="lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/jquery/jquery-tmpl.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/jquery-ui/development-bundle/ui/jquery-ui-1.8.5.custom.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/pixelmatrix-uniform/jquery.uniform.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jwysiwyg/jwysiwyg/jquery.wysiwyg.js" type="text/javascript"></script>
 <script src="lib/jqplot/dist/jquery.jqplot.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/jqplot/dist/plugins/jqplot.barRenderer.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/jqplot/dist/plugins/jqplot.categoryAxisRenderer.js" type="text/javascript" charset="utf-8"></script>
@@ -29,24 +41,32 @@
 <script src="config/locale/jquery.is.strings.json" type="text/javascript" charset="utf-8"></script>
 <script src="lib/raphael/raphael.js" type="text/javascript" charset="utf-8"></script>
 <script src="snap/data.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/familydata.js" type="text/javascript" charset="utf-8"></script>
+<script src="snap/historyData.js" type="text/javascript" charset="utf-8"></script>
 <script src="snap/snap.js" type="text/javascript" charset="utf-8"></script>
 <script src="snap/utils/decoration.js" type="text/javascript" charset="utf-8"></script>
 <script src="snap/utils/color.js" type="text/javascript" charset="utf-8"></script>
 <script src="config/scalesConfig.js" type="text/javascript" charset="utf-8"></script>
 <script src="snap/utils/iconizer.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/Canvas.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/view/canvas/canvas.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/ItemDetail.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/Line.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/view/line/line.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/ItemLine.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/view/itemLine/itemLine.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/ApplicationController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/application.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Screen.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/TimelineScreen.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/timeline/timelineScreen.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/TimelineScreenController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/ItemDetail.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/Line.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/timeline/line.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/LineController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/ItemLine.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/timeline/itemLine.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/controller/itemLineController.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/Item.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/PointItem.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/Item.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/PointItem.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/ItemController.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/controller/PointItemController.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/model/PeriodItem.js" type="text/javascript" charset="utf-8"></script>
-<script src="app/view/item/item.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/Timeline/PeriodItem.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/timeline/item.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/model/Charts/Chart.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/model/Charts/Bar.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/model/Charts/Line.js" type="text/javascript" charset="utf-8"></script>
@@ -54,12 +74,15 @@
 <script src="app/model/Widget/ChartViewer.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/view/widget/chartViewer.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/controller/ChartViewerController.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/model/List/ListScreen.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/view/list/listScreen.js" type="text/javascript" charset="utf-8"></script>
+<script src="app/controller/ListScreenController.js" type="text/javascript" charset="utf-8"></script>
 <script src="app/helpers/helper.js" type="text/javascript" charset="utf-8"></script>
 <script src="config/init.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
+
    $(document).ready(function(){
        snInit();
-       //console.log(Date.today())
    }); 
 </script>
 <style id="css" type="text/css" media="screen">
@@ -68,16 +91,79 @@
 
 
 </head>
-<body id="index">
+<body>
 
-  
-  <div id="canvas"> 
-    <div id="tml_header"></div>
-    <div id="tml_timeline"></div> 
-  </div>
-  
+<div id="wrapper">
+    <div id="header">
+            <ul class='topnav hrz-list'>
+                <li class='icon home'><a href="#"></a></li>
+                <li class='icon settings'><a href="#"></a></li>
+            </ul>
+            <form action="/">
+                <div>
+                    <span class="icon search"><a href="#"></a></span>
+                    <input type="text"/>
+                </div>
+            </form>
+    </div> 
+    <div id='leftnav'>
+           <ul>
+                <li class="selected"><span class='icon record'></span></li>
+                <li><span class='icon history'></span></li>
+                <li><span class='icon info'></span></li>
+            </ul>
+    </div>
+    <div id="content" class='record'> 
+        <div class='pane record'>
+            <div class="view-control canvas-size">
+                <span class="list-view"></span>
+                <span class="timeline-view"></span>
+            </div>
+
+            <div id="canvas"></div>
+        </div>
+        <div class='pane canvas-size history list-view'>
+            
+        </div>
+        <div class='pane canvas-size info list-view'>
+            
+        </div>
+    </div>
+
   <div id="dialog-modal"  style="display: none;">
-   
   </div>
+  <div id="modal">
+      <span class='icon close'></span>
+      <h2>Skrá ný samskipti</h2>
+      <form action='/'>
+        <div class='field f-sel'>
+            <label for='add-new-item-type'>Tegund</label>
+            <div>
+                <select type='txt' id='add-new-item-type' name='add-new-item-type'>
+                    <option>Viðtal</option>
+                    <option>Símaviðtal</option>
+                    <option>Tölvupóstur</option>
+                </select>
+            </div>
+        </div>          
+        <div class='field f-txt'>
+            <label for='add-new-item-date'>Dagsetning</label>
+            <div>
+                <input type='txt' id='add-new-item-date' name='add-new-item-date'/>
+            </div>
+        </div>
+        <div class='field f-txt'>
+            <label for='add-new-item-txt'>Lýsing</label>
+            <div>
+                <textarea id='add-new-item-txt'></textarea>
+            </div>
+        </div>
+        <div class='field f-btn'>
+           <a class='button small red'>Hætta við</a>
+           <a class='button small green'>Vista</a>
+        </div>
+      </form>
+  </div>
+ </div>
 </body>
 </html>

@@ -30,7 +30,7 @@ sn.declare("Chart.Bar", _o.extend(sn.Chart.Chart ,{
         
         
         
-        $.jqplot("barChart", _.values(this.data.chart.data), opt);       
+        $.jqplot("bar-chart", _.values(this.data.chart.data), opt);       
        }
 
 }));

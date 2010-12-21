@@ -7,7 +7,8 @@ decoration.drawIcon = function(params){
 };
 decoration.iconStyles = {   
     medium_grey: {'fill': '#777', 'stroke': 'none'},
-    medium_green:  {'fill': '#85ea8f', 'stroke': 'none'}   
+    medium_green:  {'fill': '#85ea8f', 'stroke': 'none'},
+    topnav:  {'fill': '#fff', 'stroke': 'none'}     
 };
 
 decoration.icons = {
@@ -39,8 +40,9 @@ decoration.icons = {
   },
   arrows:{
     right: "M10.129,22.186 16.316,15.999 10.129,9.812 13.665,6.276 23.389,15.999 13.665,25.725",
-    left: "M21.871,9.814 15.684,16.001 21.871,22.188 18.335,25.725 8.612,16.001 18.335,6.276"
-  }
+    left: "M21.871,9.814 15.684,16.001 21.871,22.188 18.335,25.725 8.612,16.001 18.335,6.276",
+  },
+  home:'M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z'
 };
 sn.declare("ui.config",{
     charts:{

@@ -4,7 +4,7 @@ sn.declare("Chart.Line", _o.extend(sn.Chart.Chart ,{
         this.obj = $(elem).data("obj");
         this.data = this.obj.data;
         var coordinates = this._makeDataCoordinates();
-         $.jqplot('lineChart', coordinates, {
+         $.jqplot('line-chart', coordinates, {
                                legend:{show:true},
                                title: this._writeTitle(),
                                series: this._legend(),

@@ -1,4 +1,4 @@
-$("body").delegate(".point.item","click",function(){
+$("body").delegate(".scales .point.item","click",function(){
     var elem = $(this),
         itemName = elem.data("obj").getLineItemName(),
         popUp = $("#dialog-modal");

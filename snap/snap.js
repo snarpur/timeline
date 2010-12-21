@@ -33,7 +33,6 @@ $.plugin = function(name, object)
     var args = Array.prototype.slice.call(arguments, 1);
     return this.each(function() 
     {
-
       var instance = $.data(this, name);
       if (instance) 
       {

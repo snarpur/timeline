@@ -1,6 +1,6 @@
 $("body").delegate(".toggler","click", function(){
-   var current = $(this).closest(".chartType");
-   var visible = current.next(".chartType").size() == 0 ? current.prevAll(".chartType:first") : current.next(".chartType");
+   var current = $(this).closest(".chart-type");
+   var visible = current.next(".chart-type").size() == 0 ? current.prevAll(".chart-type:first") : current.next(".chart-type");
 
    current.fadeOut("fast",function(){
         visible.fadeIn();

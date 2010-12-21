@@ -1,7 +1,7 @@
 sn.declare("Widget.ChartViewer.view","\
-    <div class='chartType ${$data}'>\
-        <div id='toggle_${$data}' class='toggler icon'></div>\
-        <div id='${$data}Chart' class='chart'></div>\
+    <div class='chart-type ${$data}'>\
+        <span id='toggle-${$data}' class='toggler'></span>\
+        <div id='${$data}-chart' class='chart'></div>\
     </div>\
 ");
 

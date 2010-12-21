@@ -16,7 +16,19 @@ sn.declare("helper",{
             capitalized = _s.capitalize(translated)
         
         return capitalized;
-    }
+    },
+    getDayMonth:function(date){
+        return Date.parse(date).toString("d-MMM");
+    },
+    getDay:function(date){
+        return Date.parse(date).toString("d");
+    },
+    getMonth:function(date){
+        return Date.parse(date).toString("MMMM");
+    },
+    
+
+
     
 
 });
